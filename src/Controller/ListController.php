@@ -11,11 +11,19 @@ class ListController extends AbstractController
     /**
      * @Route("/list", name="list")
      */
+
     public function index(Request $request)
     {
 
         return $this->render('list/index.html.twig', [
 
         ]);
+        function index(): Response
+        {
+            return $this->render('rendez_vous/index.html.twig', [
+                'controller_name' => 'RendezVousController',
+            ]);
+
+        }
     }
 }
